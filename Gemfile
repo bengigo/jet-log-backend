@@ -15,6 +15,7 @@ gem 'rails', '~> 7.0.4'
 gem 'rswag', '~> 2.8'
 gem 'rubocop', '~> 1.39'
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
+gem 'sprockets-rails', '~> 3.0', '>= 3.0.4'
 
 group :development, :test do
   gem 'capybara', '~> 3.38'
