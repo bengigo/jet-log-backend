@@ -8,15 +8,16 @@ default: &default
 development:
   <<: *default
   port: 5432
-  database: jet_log_backend_development
+  database: jet_log_development
   host: localhost
 
 test:
   <<: *default
-  database: jet_log_backend_test
+  database: jet_log_test
 
 production:
   <<: *default
-  database: jet_log_backend_production
-  username: jet_log_backend
-  password: <%= ENV["JET_LOG_BACKEND_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
+  database: jet_log_production
+  username: jet_log
+  password: <%= ENV["JET_LOG_DATABASE_PASSWORD"] %>
